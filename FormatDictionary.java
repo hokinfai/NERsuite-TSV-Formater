@@ -1,3 +1,5 @@
+package NERsuiteDictionaryTaggerResultFormatted;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -12,7 +14,7 @@ public class FormatDictionary {
 
 	public FormatDictionary(String path) throws IOException {
 		this.path = path;
-
+ 
 		String[] temName = path.split("/");
 		name = temName[temName.length - 1];
 		lineCounts();
