@@ -11,10 +11,11 @@ public class FormatDictionary {
 	private int lines;
 	private String name;
 	private StringBuilder result = new StringBuilder();
+	private String outputPath;
 
-	public FormatDictionary(String path) throws IOException {
+	public FormatDictionary(String path, String outputPath) throws IOException {
 		this.path = path;
- 
+		this.outputPath = outputPath;
 		String[] temName = path.split("/");
 		name = temName[temName.length - 1];
 		lineCounts();
@@ -82,7 +83,7 @@ public class FormatDictionary {
 
 		sentence = sentence.trim();
 
-		if (sentence.contains("XMI Reader")) {
+		if (sentence.contains("_InitialView")) {
 			String[] spilt = sentence.split("\t");
 
 			System.out.println(spilt[5] + "\t" + spilt[6] + "\t" + spilt[4] + "\t" + spilt[3] + "\n");
@@ -92,7 +93,7 @@ public class FormatDictionary {
 	}
 
 	public void fileWriter() throws IOException {
-		File file = new File("/Users/AlanHo/Documents/DissertationLibrary/Formatted Results/(formatted)" + name);
+		File file = new File(outputPath + name);
 		// creates the file
 		file.createNewFile();
 		// creates a FileWriter Object
