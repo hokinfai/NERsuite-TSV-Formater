@@ -2,7 +2,7 @@
 A program used for formatting two different text mining results including result.features.txt from NERsuitte and TSV from Argo.
 
 The input format for result.features.txt from NERsuitte has to be kept as the following:
-"BeginningIndex<tab>EndingIndex<tab>terms<tab>terms in original form<tab>annotation<tab>annotation"
+"BeginningIndex <tab> EndingIndex <tab> terms <tab> terms in original form <tab> annotation <tab> annotation"
 "0	3	206	206	CD	B-NP	O	O"
 "4	13	FIELDIANA	FIELDIANA	NN	I-NP	O	O"
 "13	14	:	:	:	O	O	O"
