@@ -1,5 +1,5 @@
 
-package NERsuiteDictionaryTaggerResultFormatted;
+package NERsuiteDictionaryTagger;
 
 import java.io.File;
 import java.io.IOException;
