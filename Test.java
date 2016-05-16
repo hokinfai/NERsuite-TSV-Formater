@@ -10,16 +10,26 @@ public class Test {
 		// result.features.txt
 		String path = "/Users/AlanHo/Documents/DissertationLibrary/TSV";
 		String output = "/Users/AlanHo/Documents/DissertationLibrary/Formatted Results/(formatted)";
+		String testingPath = "/Users/AlanHo/Documents/DissertationLibrary/NER/Programming testing (old)/";
+		String TSVformat = "/Users/AlanHo/Documents/DissertationLibrary/NER/TSV formatted/";
+		String indexPath = "/Users/AlanHo/Documents/DissertationLibrary/NER/NewFormatter/";
 
-		File folder = new File(path);
+		File folder = new File(TSVformat);
 		File[] listOfFiles = folder.listFiles();
 
-		for (int i = 0; i < listOfFiles.length; i++) {
-			if (listOfFiles[i].isFile()) {
-				if (listOfFiles[i].getName().endsWith(".txt") || listOfFiles[i].getName().endsWith(".tsv"))
-					new FormatDictionary(path + "/" + listOfFiles[i].getName(), output);
-			}
-		}
+		// for (int i = 0; i < listOfFiles.length; i++) {
+		// if (listOfFiles[i].isFile()) {
+		// if (listOfFiles[i].getName().endsWith(".txt") ||
+		// listOfFiles[i].getName().endsWith(".tsv"))
+		// new FormatDictionary(path + "/" +
+		// listOfFiles[i].getName(), output);
+		// new FormatTSV(TSVpath + listOfFiles[i].getName(),
+		// TSVformat);
+
+		new IndexMatcher("/Users/AlanHo/Documents/DissertationLibrary/NER/TSV formatted/Pair5.tsv", "/Users/AlanHo/Documents/DissertationLibrary/NER/Programming testing (old)/Pair5.txt");
 
 	}
 }
+
+// }
+// }

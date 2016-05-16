@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FormatDictionary {
+	// this program get four columns from tsv and txt files.
 	private String path;
 	private int lines;
 	private String name;
