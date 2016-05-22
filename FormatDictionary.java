@@ -69,14 +69,18 @@ public class FormatDictionary {
 		output[0] = spilt[0];
 		output[1] = spilt[1];
 		output[2] = spilt[2];
-		if (spilt[6].equals("O") && spilt[7].equals("O")) {
+		if (spilt[6].equals("O") && spilt[7].equals("O") && spilt[8].equals("O") && spilt[9].equals("O")) {
 			output[3] = "O";
-		} else if (spilt[6].equals("B-anatomicalEntity"))
-			output[3] = "B-anatomicalEntity";
+		} else if (spilt[6].contains("anatomicalEntity"))
+			output[3] = spilt[6];
+		else if (spilt[7].contains("habitat"))
+			output[3] = spilt[7];
+		else if (spilt[8].contains("quality"))
+			output[3] = spilt[8];
 		else
-			output[3] = "B-taxon";
-		result.append(output[0] + "\t" + output[1] + "\t" + output[2] + "\t" + output[3] + "\n");
-		System.out.println(output[0] + "\t" + output[1] + "\t" + output[2] + "\t" + output[3]);
+			output[3] = spilt[9];
+		result.append(output[0] + "\t" + output[1] + "\t" + output[2] + "\t" + spilt[4] + "\t" + output[3] + "\n");
+		System.out.println(output[0] + "\t" + output[1] + "\t" + output[2] + "\t" + spilt[4] + "\t" + output[3]);
 		fileWriter();
 	}
 
